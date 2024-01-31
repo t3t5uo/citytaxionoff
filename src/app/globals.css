@@ -31,3 +31,9 @@ body {
     text-wrap: balance;
   }
 }
+
+/* globals.css */
+.dot {
+  @apply absolute top-1 bg-white w-4 h-4 rounded-full;
+  transition: transform 0.3s ease-in-out;
+}
