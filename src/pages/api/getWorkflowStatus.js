@@ -3,9 +3,12 @@
 export default async function handler(req, res) {
     if (req.method === 'GET') {
       try {
-        const workflowId = 'fLSLXdA8lBfsdOdS'; // Replace with your actual workflow ID
-        const n8nUrl = 'https://dev.ajddigital.com/api/v1';
-        const apiKey = 'n8n_api_14f5cddc4e34410c4d1918cfcd834bcd60aae733cb60dfb90c30cbd370b8076170fb05576b84554e';
+        const workflowId = 'BHIMAdwQuk0BkT94'; // Replace with your actual workflow ID
+        const n8nUrl = 'https://n8n.autocab.net/api/v1';
+        const apiKey = process.env.N8N_API_KEY;
+
+        // const workflowId = 'fLSLXdA8lBfsdOdS'; // Replace with your actual workflow ID
+        // const n8nUrl = 'https://dev.ajddigital.com/api/v1';
   
         const response = await fetch(`${n8nUrl}/workflows/${workflowId}`, {
           method: 'GET',
