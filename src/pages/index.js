@@ -10,7 +10,7 @@ export default function Home() {
   // const workflowId = 'fLSLXdA8lBfsdOdS'; // Replace with your actual workflow ID
 
   useEffect(() => {
-    // Fetch workflow status on component mount
+    // Fetch workflow status on component 
     const fetchStatus = async () => {
       try {
         const response = await fetch('/api/getWorkflowStatus');
@@ -30,7 +30,7 @@ export default function Home() {
 
   const toggleWorkflow = async () => {
     // Confirmation dialog
-    if (window.confirm(`Are you sure you want to ${active ? 'deactivate' : 'activate'} the workflow?`)) {
+    if (window.confirm(`Are you sure you want to ${active ? 'deactivate' : 'activate'} the service?`)) {
       try {
         const response = await fetch('/api/toggleWorkflow', {
           method: 'POST',
@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <h1 className="block text-gray-700 text-xl font-bold mb-2">RapidTaxi API</h1>
+        <h1 className="block text-gray-700 text-xl font-bold mb-2">RapidTaxi + Ghost API</h1>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="workflow-status">
             Status:
